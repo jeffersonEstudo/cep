@@ -46,10 +46,10 @@ public class Principal {
                 PartesDoJson pegandoCampos = gson.fromJson(json, PartesDoJson.class);
                 ConsultandoCEP cep = new ConsultandoCEP(pegandoCampos);
                 cepArrayList.add(cep);
-                File file = new File("C:\\Users\\jefferson.amorim\\IdeaProjects\\cep\\listasCEP\\lista.txt");
-                FileWriter writer = new FileWriter(file);
-                writer.write(String.valueOf(cepArrayList));
-                writer.close();
+                //File file = new File("C:\\Users\\jefferson.amorim\\IdeaProjects\\cep\\listasCEP\\lista.txt");
+                FileWriter escrita = new FileWriter( busca+".json");
+                escrita.write(String.valueOf(cepArrayList));
+                escrita.close();
                 System.out.println(cep);
 
             } catch (IllegalArgumentException e) {
@@ -65,4 +65,6 @@ public class Principal {
         }
         System.out.println("O programa finalizou!");
     }
+
+
 }

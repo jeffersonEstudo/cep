@@ -1,4 +1,7 @@
-package org.example;
+package br.com;
+
+import br.com.entities.PreenchendoCampos;
+import com.google.gson.Gson;
 
 import java.io.IOException;
 import java.net.URI;
@@ -33,7 +36,16 @@ public class Main {
 
             String json = response.body();
 
-            System.out.println(json);
+            //System.out.println(json);
+
+
+            Gson gson = new Gson();
+
+            PreenchendoCampos pegandoCampos = gson.fromJson(json, PreenchendoCampos.class);
+            Cep cep = new Cep(pegandoCampos);
+
+
+            System.out.println(cep);
 
         }catch (IllegalArgumentException e){
             System.out.println("Erro Argumento ilegal. " + e.getMessage());

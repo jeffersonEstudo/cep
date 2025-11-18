@@ -1,4 +1,4 @@
-package br.com;
+package br.com.entities;
 
-public record preenchendoCampos(int cep, String logradouro, String estado) {
+public record PreenchendoCampos(String cep, String logradouro, String estado) {
 }

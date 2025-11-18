@@ -1,0 +1,1 @@
+[(CEP: 40300-730, Logadouro: Rua Coronel Felisberto Caldeira, Estado: Bahia), (CEP: 40300-650, Logadouro: Rua Matança de Baixo, Estado: Bahia)]

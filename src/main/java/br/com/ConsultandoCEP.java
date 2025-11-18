@@ -1,20 +1,20 @@
 package br.com;
 
-import br.com.entities.PreenchendoCampos;
+import br.com.entities.PartesDoJson;
 
-public class Cep {
+public class ConsultandoCEP {
     private String cep;
     private String logradouro;
     private String estado;
 
 
-    public Cep(String cep, String logradouro, String estado) {
+    public ConsultandoCEP(String cep, String logradouro, String estado) {
         this.cep = cep;
         this.logradouro = logradouro;
         this.estado = estado;
     }
 
-    public Cep(PreenchendoCampos pegandoCampos) {
+    public ConsultandoCEP(PartesDoJson pegandoCampos) {
         this.cep = pegandoCampos.cep();
         this.estado = pegandoCampos.estado();
         this.logradouro = pegandoCampos.logradouro();
@@ -47,7 +47,9 @@ public class Cep {
 
 @Override
     public String toString(){
-     return "CEP: " + cep;
+        return "(CEP: " + cep +
+                ", Logadouro: " + logradouro +
+                ", Estado: " + estado + ")";
 }
 
 
